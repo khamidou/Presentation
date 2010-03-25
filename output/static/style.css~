@@ -5,7 +5,14 @@ body {
   text-align: center;
 }
 
-#slides {
+#title {
+       padding: 10px;
+       font-family: courier, serif;
+       height: 28px;
+       line-height: 14px;
+}
+
+#content {
 	 padding: 4px;
 	 width: 50em;
 	 margin-left: auto;

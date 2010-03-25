@@ -11,7 +11,7 @@
 
 	$(document).keyup(function(event) {
 		if (event.keyCode == '39' || event.keyCode == '13') {
-    			if (slide_count < {{num_slides}}) {
+    			if (slide_count < 3) {
 					  $('#slide_' + slide_count).hide(0);
 					  slide_count += 1;
 					  $('#slide_' + slide_count).show()
@@ -31,11 +31,27 @@
   </script>
 
   <div id="slides">
-    {% for slide in slides %}
-    <div id="slide_{{loop.index0}}">
-      {{ slide }}
+    
+    <div id="slide_0">
+      	<h3>This is a short intro</h3>
+
+	<p>An this is a paragraph.<br />Followed by a <a href="http://neyret.fr/~karim">link</a></p>
     </div>
-    {% endfor %}
+    
+    <div id="slide_1">
+      	<h2>Development</h2>
+
+	<p>Ok, here goes some important things I wanted to talk about&#8230;<br />Here is a random image : </p>
+
+	<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ggb_by_night.jpg/800px-Ggb_by_night.jpg" alt="" /></p>
+    </div>
+    
+    <div id="slide_2">
+      	<h3>Oh, this is already the end of the presentation !</h3>
+
+	<h1>the End</h1>
+    </div>
+    
   </div>
 </body>
 </html>

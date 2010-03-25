@@ -13,9 +13,6 @@ env = Environment(loader=FileSystemLoader('templates'))
 def templ(name, **args):
 	return env.get_template(name).render(**args)
 
-def textile_templ(name, **args):
-	return textile.textile(env.get_template(name).render(**args))
-
 slides = []
 
 for file in sorted(os.listdir('./presentation/')):
@@ -23,7 +20,7 @@ for file in sorted(os.listdir('./presentation/')):
 
 rmtree("./output")
 os.mkdir("./output")
-open("./output/index.htm", "w+").write(templ("index.htm", slides=slides))
+open("./output/index.htm", "w+").write(templ("index.htm", slides=slides, num_slides=len(slides)))
 copytree("js", "output/js")
 copytree("static", "output/static")
 
