@@ -1,8 +1,7 @@
 Presentation
 ============
 
-Presentation is a bunch of script I use to make... html presentations. Instead of fighting powerpoint or ooimpress, I can write my presentation in the 
-comfort of my text editor and have it formatted to an html file.
+Presentation is a bunch of script I use to make... html presentations. Instead of fighting powerpoint or ooimpress, I can write my presentation in the comfort of my text editor and have it formatted in an html file.
 
 Requirements
 ============
@@ -16,7 +15,7 @@ The directory layout
 
 Presentation uses 4 directories:
 - presentation is the directory where will reside your slides. The slides must be sorted by order of apparition (for instance by prefixing them with their
-  apparition order : 1-intro, 2-development, etc). This slides are formatted in textile markup.
+  apparition order : 1-intro, 2-development, etc). These slides are formatted in textile markup.
 - templates contain the template files used by pres.py to generate the presentation html
 - js contains some static js source code
 - static contains static files : images, stylesheets, etc
