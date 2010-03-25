@@ -1,0 +1,30 @@
+<html>
+<head><title>Presentation</title></head>
+<body>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#slides").hide(0);
+	$("#slide_0").show();
+	var slide_count = 0;
+
+	$(document).keypress(function(event) {
+		//if (event.keyCode == '39') {
+			$('#slide_' + slide_count).hide(0);
+			slide_count += 1;
+			$('#slide_' + slide_count).show()
+		//}
+   	});
+
+});
+</script>
+
+<div id="slides">
+{% for slide in slides %}
+	<div id="slide_{{loop.index0}}">
+		{{ slide }}
+	</div>
+{% endfor %}
+</div>
+</body>
+</html>
